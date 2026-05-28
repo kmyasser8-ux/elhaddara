@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>منصة الحضارة الفكرية - لوحة التحكم</title>
+    <!-- استدعاء Tailwind CSS والمكتبات الخارجية -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- استدعاء ملفات التنسيق المحلية بمساراتها الصحيحة -->
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/theme.css">
+    <link rel="stylesheet" href="./css/cards.css">
+</head>
+<body class="bg-[#0b0f19] text-white font-['Reem_Kufi']">
+
+    <!-- هيكل لوحة التحكم الأساسي -->
+    <div class="flex h-screen overflow-hidden">
+        
+        <!-- الشريط الجانبي (Sidebar) -->
+        <aside class="w-64 bg-[#111827] border-l border-white/5 p-6 flex flex-col justify-between">
+            <div>
+                <div class="flex items-center space-x-reverse space-x-3 mb-8">
+                    <i class="fas fa-landmark text-amber-500 text-2xl"></i>
+                    <span class="text-xl font-bold tracking-wide">لوحة التحكم</span>
+                </div>
+                <nav class="space-y-2">
+                    <a href="./index.html" class="flex items-center space-x-reverse space-x-3 p-3 rounded-xl bg-amber-500/10 text-amber-500">
+                        <i class="fas fa-home"></i>
+                        <span>الرئيسية</span>
+                    </a>
+                    <!-- أضف عناصر القائمة الأخرى هنا -->
+                </nav>
+            </div>
+        </aside>
+
+        <!-- المحتوى الرئيسي (Main Content) -->
+        <main class="flex-1 overflow-y-auto p-8">
+            <header class="mb-8">
+                <h1 class="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-orange-500">مرحباً بك في إدارة المنصة</h1>
+                <p class="text-gray-400 mt-2">البنية الأساسية جاهزة ومؤمنة الآن.</p>
+            </header>
+            
+            <!-- مساحة العمل والبطاقات -->
+            <div class="grid grid-cols-1 md-grid-cols-3 gap-6">
+                <!-- محتوى لوحة التحكم يوضع هنا -->
+            </div>
+        </main>
+    </div>
+
+    <!-- استدعاء سكربت التوجيه والتحكم -->
+    <script src="./js/router.js"></script>
+</body>
+</html>
