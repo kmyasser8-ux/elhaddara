@@ -1,0 +1,5 @@
+body.light { background: #fdfbf7; color: #0f172a; }
+body.light .glass { background: rgba(15, 23, 42, 0.02); border-color: rgba(15, 23, 42, 0.06); }
+body.light .text-gray-400 { color: #475569; }
+body.light .text-gray-300 { color: #1e293b; }
+body.light .border-white\/5 { border-color: rgba(15, 23, 42, 0.08); }
