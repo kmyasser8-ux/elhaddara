@@ -1,5 +1,6 @@
+<!DOCTYPE html>
 <html lang="ar" dir="rtl">
-x<head>
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>منصة الحضارة الفكرية - لوحة التحكم</title>
@@ -15,7 +16,7 @@ x<head>
 
     <script>
         tailwind.config = {
-            darkMode: 'class', // تفعيل نمط الإضاءة عبر الكلاس
+            darkMode: 'class',
             theme: {
                 extend: {
                     colors: {
@@ -27,12 +28,11 @@ x<head>
         }
     </script>
 </head>
-<body class="bg-darkBg text-white font-sans antialiased min-h-screen transition-colors duration-300">
+<body class="bg-[#0b0f19] text-white font-sans antialiased min-h-screen transition-colors duration-300"></body>
 
-    <div class="flex min-h-screen w-full">
+    <div class="flex min-h-screen w-full relative">
         
-        <!-- الشريط الجانبي -->
-        <aside class="w-64 bg-panelBg border-l border-white/5 p-6 flex flex-col justify-between hidden md:flex shrink-0">
+        <aside class="w-64 bg-[#111827] border-l border-white/5 p-6 flex flex-col justify-between hidden md:flex shrink-0">
             <div>
                 <div class="flex items-center space-x-reverse space-x-3 mb-8">
                     <i class="fas fa-landmark text-amber-500 text-2xl"></i>
@@ -42,99 +42,92 @@ x<head>
                 <nav class="space-y-2">
                     <a href="./index.html" class="flex items-center space-x-reverse space-x-3 p-3 rounded-xl bg-amber-500/10 text-amber-500 font-medium">
                         <i class="fas fa-home w-5 text-center"></i>
-                        <span>العودة للمحراب الرئيسي</span>
+                        <span>المحراب الرئيسي</span>
                     </a>
+                    <div id="sidebar-menu" class="space-y-2"></div>
                 </nav>
             </div>
             
-            <!-- زر تبديل الإضاءة وتغيير الخلفية في أسفل القائمة -->
             <div class="border-t border-white/5 pt-4 space-y-3">
                 <button id="theme-toggle" class="w-full flex items-center justify-center space-x-reverse space-x-2 p-3 rounded-xl bg-white/5 hover:bg-amber-500 hover:text-darkBg transition-all">
-                    <i id="theme-toggle-icon" class="fas fa-moon"></i>
-                    <span id="theme-toggle-text">الوضع الليلي</span>
+                    <i id="theme-icon" class="fas fa-moon"></i>
+                    <span id="theme-text">الوضع الليلي</span>
                 </button>
                 <div class="text-xs text-gray-500 text-center">منصة الحضارة الفكرية &copy; 2026</div>
             </div>
         </aside>
 
-        <!-- المحتوى الرئيسي -->
-        <main class="flex-1 w-full p-6 md:p-8 overflow-y-auto">
+        <main class="flex-1 w-full bg-[#0b0f19] p-6 md:p-8 overflow-y-auto">
             
-            <header class="mb-8 border-b border-white/5 pb-6 flex justify-between items-center">
-                <div>
-                    <h1 class="text-3xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-orange-500">بناء الوعي وتفكيك المقولات</h1>
-                    <p class="text-gray-400 mt-2 text-sm md:text-base">منصة معاصرة تعنى بالدراسات الحضارية والفلسفية والسياسية.</p>
-                </div>
+            <header class="mb-8 border-b border-white/5 pb-6">
+                <h1 class="text-3xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-orange-500">
+                    بناء الوعي وتفكيك المقولات
+                </h1>
+                <p class="text-gray-400 mt-2 text-sm md:text-base max-w-3xl">
+                    منصة معاصرة تُعنى بالدراسات الفلسفية والأطروحات السياسية، ومقاربة القضايا بنظرة حضارية عميقة.
+                </p>
             </header>
             
-            <!-- 🏛️ قسم العلوم الأساسية -->
-            <section class="mb-10">
-                <h2 class="text-xl font-bold mb-4 text-amber-400 flex items-center space-x-reverse space-x-2">
-                    <span class="w-2 h-2 rounded-full bg-amber-400"></span>
-                    <span>العلوم الأساسية</span>
-                </h2>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 w-full">
-                    <!-- بطاقة علم 1 -->
-                    <div class="bg-panelBg/50 backdrop-blur-md p-6 rounded-2xl border border-white/5 flex flex-col justify-between">
-                        <div>
-                            <h3 class="text-lg font-bold mb-2">الدراسات الفلسفية والبنيوية</h3>
-                            <p class="text-gray-400 text-sm mb-4">تفكيك المفاهيم وتحليل الجذور الفكرية للمقولات المعاصرة.</p>
+            <div class="space-y-10 w-full">
+                
+                <section>
+                    <h2 class="text-xl font-bold mb-6 text-amber-400 flex items-center space-x-reverse space-x-2">
+                        <span class="w-2 h-2 rounded-full bg-amber-400"></span>
+                        <span>العلوم الأساسية للدراسات</span>
+                    </h2>
+                    <div id="primary-sciences-container" class="grid grid-cols-1 md:grid-cols-3 gap-6 w-full">
                         </div>
-                        <a href="#" class="text-center bg-white/5 hover:bg-amber-500 hover:text-darkBg p-2 rounded-xl text-xs font-semibold transition-all">الولوج للأطروحات</a>
-                    </div>
-                    <!-- بطاقة علم 2 -->
-                    <div class="bg-panelBg/50 backdrop-blur-md p-6 rounded-2xl border border-white/5 flex flex-col justify-between">
-                        <div>
-                            <h3 class="text-lg font-bold mb-2">التحليل السياسي الإقليمي</h3>
-                            <p class="text-gray-400 text-sm mb-4">دراسة ومقاربة التوازنات السياسية والاتفاقيات الكبرى برؤية سوسيولوجية.</p>
-                        </div>
-                        <a href="#" class="text-center bg-white/5 hover:bg-amber-500 hover:text-darkBg p-2 rounded-xl text-xs font-semibold transition-all">فتح ملف التحليل</a>
-                    </div>
-                </div>
-            </section>
+                </section>
 
-            <!-- 📜 قسم العلوم الثانوية والمشاريع -->
-            <section>
-                <h2 class="text-xl font-bold mb-4 text-orange-400 flex items-center space-x-reverse space-x-2">
-                    <span class="w-2 h-2 rounded-full bg-orange-400"></span>
-                    <span>العلوم الثانوية والمشاريع الأدبية</span>
-                </h2>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 w-full">
-                    <!-- بطاقة المخطوطات -->
-                    <div class="bg-panelBg/50 backdrop-blur-md p-6 rounded-2xl border border-white/5 flex flex-col justify-between">
-                        <div>
-                            <h3 class="text-lg font-bold mb-2">مخطوطة رواية إدريس</h3>
-                            <p class="text-gray-400 text-sm mb-4">متابعة الأبعاد السردية والفكرية وتطوير فصول الرواية.</p>
+                <section>
+                    <h2 class="text-xl font-bold mb-6 text-orange-400 flex items-center space-x-reverse space-x-2">
+                        <span class="w-2 h-2 rounded-full bg-orange-400"></span>
+                        <span>العلوم الثانوية والمشاريع</span>
+                    </h2>
+                    <div id="secondary-sciences-container" class="grid grid-cols-1 md:grid-cols-3 gap-6 w-full">
                         </div>
-                        <a href="#" class="text-center bg-white/5 hover:bg-orange-500 hover:text-darkBg p-2 rounded-xl text-xs font-semibold transition-all">عرض المسودة</a>
-                    </div>
-                </div>
-            </section>
+                </section>
 
+            </div>
         </main>
     </div>
 
-    <!-- ربط السكربت الذي يتحكم بالزر ويقرأ الأوامر -->
     <script src="./js/router.js"></script>
     
-    <!-- سكربت برمجى سريع لتشغيل زر الإضاءة فوراً دون انتظار تحميل ملفات أخرى -->
     <script>
-        const themeToggleBtn = document.getElementById('theme-toggle');
-        const themeIcon = document.getElementById('theme-toggle-icon');
-        const themeText = document.getElementById('theme-toggle-text');
+        document.addEventListener('DOMContentLoaded', () => {
+            // جلب العناصر بدقة بناءً على معرفاتها المحددة في الـ aside
+            const toggleBtn = document.getElementById('theme-toggle');
+            const themeIcon = document.getElementById('theme-icon');
+            const themeText = document.getElementById('theme-text');
 
-        themeToggleBtn.addEventListener('click', function() {
-            document.documentElement.classList.toggle('dark');
-            if (document.documentElement.classList.contains('dark')) {
-                themeIcon.className = 'fas fa-sun text-amber-400';
-                themeText.innerText = 'الوضع النهاري';
-                document.body.style.backgroundColor = '#f3f4f6';
-                document.body.style.color = '#1f2937';
-            } else {
-                themeIcon.className = 'fas fa-moon';
-                themeText.innerText = 'الوضع الليلي';
-                document.body.style.backgroundColor = '#0b0f19';
-                document.body.style.color = '#ffffff';
+            // دالة التحكم في تحديث واجهة المستخدم (النص والأيقونة)
+            function updateThemeUI(isDark) {
+                if (isDark) {
+                    if (themeIcon) themeIcon.className = 'fas fa-moon text-blue-400';
+                    if (themeText) themeText.innerText = 'الوضع الليلي';
+                } else {
+                    if (themeIcon) themeIcon.className = 'fas fa-sun text-amber-500';
+                    if (themeText) themeText.innerText = 'الوضع النهاري';
+                }
+            }
+
+            // فحص الحالة الافتراضية عند تحميل الصفحة (إذا لم يحتوي الـ body على light فهو داكن افتراضياً)
+            const isInitiallyDark = !document.body.classList.contains('light');
+            updateThemeUI(isInitiallyDark);
+
+            if (toggleBtn) {
+                toggleBtn.addEventListener('click', () => {
+                    // 1. التبديل لـ Tailwind CSS على مستوى عنصر الـ html العلوي
+                    document.documentElement.classList.toggle('dark');
+                    
+                    // 2. التبديل لملف theme.css المخصص على مستوى الـ body
+                    document.body.classList.toggle('light');
+
+                    // 3. تحديث حالة النصوص والأيقونات فوراً بعد الضغط
+                    const currentIsDark = !document.body.classList.contains('light');
+                    updateThemeUI(currentIsDark);
+                });
             }
         });
     </script>

@@ -1,2 +1,25 @@
-body { font-family: 'Cairo', sans-serif; background: #020617; color: #f8fafc; transition: background 0.4s ease, color 0.4s ease; overflow-x: hidden; }
-.glass { background: rgba(255, 255, 255, 0.01); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); border: 1px solid rgba(255, 255, 255, 0.05); }
+/* إعدادات الخط الافتراضي للموقع بالكامل */
+body {
+    font-family: 'Cairo', sans-serif;
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* تخصيص شريط التمرير (Scrollbar) ليتناسب مع هوية المنصة المعمارية */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(15, 23, 42, 0.05);
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(245, 158, 11, 0.3);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(245, 158, 11, 0.5);
+}
